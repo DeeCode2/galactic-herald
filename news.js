@@ -16,7 +16,7 @@ fetch('https://api.wheretheiss.at/v1/satellites/25544')
 })
 
 //get people currently on the ISS
-fetch('https://api.open-notify.org/astros.json')
+fetch('http://api.open-notify.org/astros.json')
 .then((response) => response.json())
 .then((data) => {
     
