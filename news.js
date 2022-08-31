@@ -16,14 +16,14 @@ fetch('https://api.wheretheiss.at/v1/satellites/25544')
 })
 
 //get people currently on the ISS
-fetch('http://api.open-notify.org/astros.json')
-.then((response) => response.json())
-.then((data) => {
+//will not work as the url is insecure
+// fetch('http://api.open-notify.org/astros.json')
+// .then((response) => response.json())
+// .then((data) => {
     
-    const people = data.people.filter((member) => member.craft === 'ISS')
-    const crew = people.map((member) => member.name).join(", ")
+//     const people = data.people.filter((member) => member.craft === 'ISS')
+//     const crew = people.map((member) => member.name).join(", ")
     
-    //console.log(crew)
-    document.getElementById('crew').innerText = `The International Space Station travels at 17,500 miles per hour and orbits the Earth every 90 minutes. Currently ther are 7 crew members aboard the ISS: ${crew}.`
-})
-
+//     console.log(crew)
+//     //document.getElementById('crew').innerText = `The International Space Station travels at 17,500 miles per hour and orbits the Earth every 90 minutes. Currently ther are 7 crew members aboard the ISS: Oleg Artemyev, Denis Matveev, Sergey Korsakov, Kjell Lindgren, Bob Hines, Samantha Cristoforetti and Jessica Watkins.`
+// })
