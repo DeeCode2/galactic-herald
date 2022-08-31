@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Playfair+Display+SC:wght@900&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 3em;
+  background-image: url("paper.jpg");
+  font-family: "EB Garamond", serif;
+  text-align: center;
+  font-size: 1.2em;
+}
+body p {
+  text-align: left;
+}
+@media (max-width: 768px) {
+  body {
+    padding: 0.5em;
+  }
+  body main {
+    padding: 0.3em;
+  }
+}
+body main {
+  padding: 1.5em;
+  border: solid 3px;
+}
+body header {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  align-items: center;
+}
+body header #logo svg {
+  max-width: 150px;
+}
+body header h1 {
+  font-size: 10vmin;
+  font-family: "Playfair Display SC", serif;
+  font-weight: bolder;
+  border-left: 1px solid;
+  border-right: 1px solid;
+}
+@media (max-width: 768px) {
+  body header {
+    display: block;
+  }
+  body header h1 {
+    width: 100%;
+    border: none;
+    font-size: 8vmin;
+  }
+  body header #logo, body header #price {
+    display: none;
+  }
+}
+body section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+@media (max-width: 768px) {
+  body section {
+    display: flex;
+    flex-direction: column;
+  }
+  body section #apod {
+    border-bottom: solid 1px;
+  }
+  body section #articles {
+    display: flex;
+    border: none;
+  }
+  body section #articles div {
+    height: 100%;
+    padding: 0.8em;
+  }
+  body section #articles div img {
+    aspect-ratio: 1/0.75;
+  }
+}
+@media (max-width: 400px) {
+  body section #articles {
+    flex-direction: column;
+  }
+}
+body section h4 {
+  grid-column: 1/4;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 0.5em;
+  padding-top: 0.6em;
+  padding-bottom: 0.6em;
+  text-align: center;
+  border-top: 0.5em double;
+  border-bottom: 0.5em double;
+}
+body section article {
+  padding: 0.3em;
+}
+body section #apod {
+  grid-column: 1/3;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+body section #apod h2 {
+  font-size: 3.5vmax;
+}
+body section #apod #apod__img {
+  min-height: 60vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(85%);
+  transition: 0.3s;
+}
+body section #apod #apod__img:hover {
+  filter: grayscale(0%);
+}
+body section #articles img {
+  width: 100%;
+  filter: grayscale(85%);
+  transition: 0.3s;
+}
+body section #articles img:hover {
+  filter: grayscale(0%);
+}/*# sourceMappingURL=style.css.map */
